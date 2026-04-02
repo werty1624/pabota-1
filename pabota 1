@@ -1,0 +1,106 @@
+lass Student:
+    def __init__(self,name,age,gpa):
+        self.name=name
+        self.age=age
+        self.gpa=gpa
+
+    def info(self):
+        print(f'Имя:{self.name},Возраст{self.age},Оценка:{self.gpa}')
+
+
+
+class Rectangle:
+    def __init__(self,lenght,height):
+     self.height=height
+     self.lenght=lenght
+    def Area(self):
+        return self.height*self.lenght
+    def Perimetr(self):
+        return 2*(self.height+self.lenght)
+    
+
+class Bank:
+    def __init__(self,name,balance):
+         self.name=name
+         self.balance=balance
+    def deposit(self,amount):
+        self.balance += amount
+    def withdraw(self,amount):
+        if amount > 0:
+            self.balance -=amount
+        else:
+            print("Нету денег, бомж")
+    def checkbalance(self):
+        return self.balance
+    
+
+class Book:
+    def __init__(self,name,author,pages):
+        self.name=name
+        self.author=author
+        self.pages=pages
+    def is_long(self):
+        return self.pages >300
+
+class Car:
+    def __init__(self,brand,speed):
+         self.brand=brand
+         self.speed=speed
+    def accelerate(self,value):
+        self.speed += value
+    def brake(self,value):
+        if self.speed > 0:
+            self.speed -= value
+        else:
+            print("Скорости нету")
+    
+class Dog:
+        def __init__(self,name,age):
+            self.name=name
+            self.age=age
+        def bark(self):
+            print("ГАВ!!!!!")
+        def human_age(self):
+            return self.age *7
+        
+class Product:
+    def __init__(self,name,price,quantity):
+            self.name=name
+            self.price=price
+            self.quantity=self.quantity
+    def total_price(self):
+        return self.price*self.quantity
+    def apply_discount(self,percent):
+        self.price *= (1-percent/100)
+
+class Teacher:
+        def __init__(self,name,subject):
+            self.name=name
+            self.subject=subject
+        def teach(self,student):
+             print(f'Учитель{self.name}учит ученика{student.name}')
+
+class Student2:
+    def __init__(self,name,grade):
+        self.name=name
+        self.garde=grade
+
+class Circle:
+    def __init__(self,raduis):
+        self.raduis=raduis
+    def area(self):
+        return 3.14 *self.raduis **2
+    def circumreference(self):
+        return 2*3.14*self.raduis
+    
+class TodoList:
+    def __init__(self):
+        self.tasks=[]
+    def add_task(self,task):
+        self.tasks.append(task)
+    def remove_task(self,task):
+        if task in self.tasks:
+            self.tasks.remove(task)
+    def show(self):
+        for task in self.tasks:
+            print(task)
